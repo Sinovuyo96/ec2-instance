@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type = var.type_of_instance
   
   tags = {
-    Name = "Luja"
+    Name = "Dev"
   }
 }
 
