@@ -30,19 +30,19 @@ jobs:
       - name: Terraform Initialize Stage
         run: |
           pwd
-      #    cd rancher
+          ls
           terraform init
       - name: Terraform Validate Stage
         run: |
-        #  cd rancher
+          ls
           terraform validate
       - name: Terraform Plan Stage
         run: |
-        #  cd rancher
+          ls
           terraform plan
       - name: Terraform Apply Stage
         run: |
-        #  cd rancher
+          ls
           terraform apply -auto-approve
 #       - name: Terraform Destroy Stage
 #         run: |
