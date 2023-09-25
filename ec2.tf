@@ -21,12 +21,6 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.type_of_instance
 
-  tags = {
-    Name = "HelloWorld"
-    Envoronment = "dev"
-  }
-  }
-
   user_data = <<-EOL
 #!/bin/bash
 # Install docker
@@ -46,4 +40,8 @@ curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compos
 chmod +x /usr/local/bin/docker-compose 
 sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher
   EOL
+
+  tags = {
+    Name = "HelloWorld"
+  }
 }
