@@ -30,21 +30,21 @@ jobs:
       - name: Terraform Initialize Stage
         run: |
           pwd
-       # cd ec2-instance
+      #    cd rancher
           terraform init
       - name: Terraform Validate Stage
         run: |
-       # cd ec2-instance
+        #  cd rancher
           terraform validate
       - name: Terraform Plan Stage
         run: |
-       # cd ec2-instance
+        #  cd rancher
           terraform plan
       - name: Terraform Apply Stage
         run: |
-       # cd ec2-instance
+        #  cd rancher
           terraform apply -auto-approve
 #       - name: Terraform Destroy Stage
 #         run: |
-#           cd ec2-instance
+#           cd terraform/infrastructure
 #           terraform destroy -auto-approve
