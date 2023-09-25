@@ -30,19 +30,19 @@ jobs:
       - name: Terraform Initialize Stage
         run: |
           pwd
-          cd ec2-instance/
+       # cd ec2-instance
           terraform init
       - name: Terraform Validate Stage
         run: |
-          cd ec2-instance/
+       # cd ec2-instance
           terraform validate
       - name: Terraform Plan Stage
         run: |
-          cd ec2-instance/
+       # cd ec2-instance
           terraform plan
       - name: Terraform Apply Stage
         run: |
-          cd ec2-instance/
+       # cd ec2-instance
           terraform apply -auto-approve
 #       - name: Terraform Destroy Stage
 #         run: |
